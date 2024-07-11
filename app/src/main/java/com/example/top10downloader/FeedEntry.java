@@ -1,0 +1,55 @@
+package com.example.top10downloader;
+
+import android.util.Log;
+
+public class FeedEntry {
+    private final String TAG ="Feed Entry";
+    private String name,artist,releaseDate,summary,imageURL;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) { this.name = name; }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
+        releaseDate = releaseDate.substring(0,10);// to show only date
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    @Override
+    public String toString() {
+        return  "name= " + name + '\n' +
+                ", artist= " + artist + '\n' +
+                ", releaseDate= " + releaseDate + '\n' +
+                ", imageURL= " + imageURL + '\n';
+    }
+}
